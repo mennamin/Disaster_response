@@ -1,16 +1,103 @@
 
-.card
+html,body
 {
-  width:400 px;
-  height:500 px;
-  background-color: rgb(240, 244, 251);
+  font-family:serif;
+  background-color:  rgb(230, 238, 253);
+}
+
+.big-card
+{
+ height:98%;
+ margin:3%;
+ background-color: rgb(204, 220, 249);
+ border-radius: 25px;
+}
+
+.pic-n-name
+{
+  display:flex;
+  flex-direction: row;
+}
+
+.info-card
+{
+  width:90%;
+  height:400px;
+
+  margin-left: 50px;
+  background-color:  rgba(230, 238, 253, 0.819);
+  border-radius: 25px;
 
 }
+.role-card
+{
+  display: flex;
+  flex-direction: row;
+}
+
+#txt-pfp
+{
+    font-size:25px;
+    margin-top: 5px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+#role
+{
+
+  font-style: oblique;
+  font-size:18px;
+  color:  rgb(21, 42, 100); ;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.small-txt
+{ margin-top: 5px;
+   margin-left: 10px;
+    font-size:14px;
+
+
+}
+
+.small-info
+{
+color:  rgba(19, 34, 75, 0.511);
+font-style: oblique;
+margin-bottom: 3px;
+
+}
+
+#txt-role
+{
+    font-size:18px;
+    margin-right: 50px;
+     margin-top: 5px;
+    margin-left: 5px;
+
+}
+
+
+.name-card
+{
+
+  width:60%;
+  height:100px;
+  margin:1%;
+  margin-top: 3%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 25px;
+}
+
+
 #pic
 {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%; 
-  padding-left: 30px;
-  padding-top:10px
+width:10%;
+height:10%;
+border-radius: 50%; 
+margin: 25px;
+
 }
+
