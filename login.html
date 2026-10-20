@@ -3,15 +3,26 @@
 <head>
 <title>Log in</title>
 <style>
-  html, body { height: 100%; margin: 0; }
+  html { height: 100%; margin: 0; }
+  body { height: 100%; margin: 0; }
   body { display: flex; align-items: center; justify-content: center;}
   form { display: flex; flex-direction: column; gap: 8px; width: 260px; }
-  input, button { padding: 8px; font-size: 16px; }
+  input { padding: 8px; font-size: 16px; }
+  select { padding: 8px; font-size: 16px; }
+  button { padding: 8px; font-size: 16px; }
 </style>
 </head>
 <body>
   <form id="form">
     <h2 id="title">Log in</h2>
+     <select id="dashboard" required>
+     <option value="" disabled selected>Select dashboard</option>
+     <option value="firefighter">Firefighter</option>
+     <option value="reporter">Reporter</option>
+     <option value="hospital">Hospital</option>
+     <option value="police">Police</option>
+     <option value="admin">Admin</option>
+       </select>
     <input type="text" id="name" placeholder="Name" hidden>
     <input type="email" id="email" placeholder="Email" required>
     <input type="password" id="password" placeholder="Password" required>
