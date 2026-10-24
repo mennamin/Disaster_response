@@ -4,17 +4,23 @@ html,body
   background-color:  rgb(230, 238, 253);
 }
 
+
 .big-card
 {
-
- height: 650px;
- margin:3%;
- background-color: rgb(204, 220, 249);
- border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  flex-wrap:wrap;
+  height: 650px;
+  margin:3%;
+  background-color: rgb(204, 220, 249);
+  border-radius: 25px;
 }
 
 .pic-n-name
 {
+  width:450px;
+  height:150px;
   display:flex;
   flex-direction: row;
 }
@@ -36,12 +42,11 @@ html,body
 
 #role
 {
-
   font-style: oblique;
   font-size:18px;
-  color:  rgb(21, 42, 100); ;
-    margin-top: 5px;
-    margin-left: 10px;
+  color:  rgb(21, 42, 100);
+  margin-top: 5px;
+  margin-left: 10px;
 }
 
 .small-txt
@@ -66,16 +71,14 @@ margin-bottom: 3px;
     margin-right: 50px;
      margin-top: 5px;
     margin-left: 5px;
-
 }
 
 .name-card
 {
-
   width:60%;
   height:100px;
   margin:1%;
-  margin-top: 3%;
+  margin-top: 5%;
   display: flex;
   flex-direction: column;
   border-radius: 25px;
@@ -84,41 +87,66 @@ margin-bottom: 3px;
 
 #pic
 {
-width:10%;
-height:10%;
+width:110px;
+height:110px;
 border-radius: 50%; 
 margin: 25px;
 }
 
 .info-card
 {
- 
-  margin:3%;
   border-radius:25px;
-  background-color:   rgb(230, 238, 253);
+  background-color: rgb(230, 238, 253);
 }
 #info-parent
 {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  margin-top:20px;
+  margin-left:40px;
+  width:700px;
+  align-items:flex-start;
+  flex-direction: column;
+  
 }
 
 #infc1
 {
-   height:300px;
-   width:400px;
+  height:270px;
+  width:600px;
+  border-radius: 25px;
 }
-#infc2
+#infc2 
 {
-  margin-top:80px;
-   height:250px;
-   width:400px;
-  
+  margin-top:30px;
+  height:150px;
+  width:700px;
+  border-radius: 25px;
 }
-#infc3
-{
-  height:200px;
-   width:650px;
 
+#info-parent2
+{
+   margin-top:50px;
+   height:560px;
+   width:550px;
+   border-radius:25px;
+   background-color: rgb(230, 238, 253);
 }
+
+#repid
+{
+  margin-top:5px;
+  width:300px;
+  height:auto;
+  margin-left: 120px;
+}
+
+.text-info
+{
+  height:21px;
+  font-size: 20px;
+  margin-top: 16px;
+  margin-left:20px;
+  width:100px;
+  color:  rgb(21, 42, 100);  
+}
+
