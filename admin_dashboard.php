@@ -20,10 +20,6 @@ $all = sort_incidents($_SESSION['incidents']);
 $pageTitle = 'Admin Dashboard';
 require 'includes/header.php';
 ?>
-<?php if ($message): ?>
-  <div class="flash <?= $message['type'] ?>"><?= e($message['text']) ?></div>
-<?php endif; ?>
-
 <div class="stats">
   <div class="stat"><div class="num"><?= count($_SESSION['users']) ?></div><div class="label">Users</div></div>
   <div class="stat"><div class="num"><?= count($all) ?></div><div class="label">Total incidents (history)</div></div>
@@ -32,13 +28,17 @@ require 'includes/header.php';
 </div>
 
 <div class="actions">
-  <a class="btn" href="users.php">Manage users</a>
-  <a class="btn secondary" href="#">+ Report new incident</a>
+  <a class="btn" href="users.php">Manage users &amp; profiles</a>
+  <a class="btn secondary" href="report_incident.php">+ Report new incident</a>
   <a class="btn secondary" href="#">Backup requests</a>
   <a class="btn secondary" href="#">Department resources</a>
 </div>
 
-<h2>All incidents</h2>
+<?php if ($message): ?>
+  <div class="flash <?= $message['type'] ?>"><?= e($message['text']) ?></div>
+<?php endif; ?>
+
+<h2>Reports &amp; priority</h2>
 
 <?php require 'includes/incident_table.php'; ?>
 <?php require 'includes/footer.php'; ?>
