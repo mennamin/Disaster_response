@@ -2,7 +2,7 @@
 require 'includes/auth.php';
 require_role(['reporter']);
 
-// only this reporter's own incidents
+
 $me = current_user();
 $mine = incidents_of($me['id']);
 
@@ -17,25 +17,6 @@ require 'includes/header.php';
 </div>
 
 <div class="actions">
-  <a class="btn" href="#">+ Report new incident</a>
+  <a class="btn" href="report_incident.php">+ Report new incident</a>
 </div>
-
-<h2>My recent reports</h2>
-<table>
-  <tr><th>#</th><th>Type</th><th>Location</th><th>Severity</th><th>Status</th><th>Update</th><th>Time</th></tr>
-  <?php foreach ($mine as $r): ?>
-    <tr>
-      <td><?= $r['id'] ?></td>
-      <td><?= e($r['type']) ?></td>
-      <td><?= e($r['location']) ?></td>
-      <td><span class="badge <?= $r['severity'] ?>"><?= $r['severity'] ?></span></td>
-      <td><?= ucfirst($r['status']) ?></td>
-      <td><?= e($r['note']) ?></td>
-      <td><?= $r['time'] ?></td>
-    </tr>
-  <?php endforeach; ?>
-  <?php if (count($mine) == 0): ?>
-    <tr><td colspan="7">You have not reported any incidents yet.</td></tr>
-  <?php endif; ?>
-</table>
 <?php require 'includes/footer.php'; ?>
