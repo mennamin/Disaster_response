@@ -21,6 +21,7 @@
      <option value="reporter">Reporter</option>
      <option value="hospital">Hospital</option>
      <option value="police">Police</option>
+     <option value= "incident managment">Incident managment</option>
      <option value="admin">Admin</option>
        </select>
     <input type="text" id="name" placeholder="Name" hidden>
