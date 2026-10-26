@@ -19,7 +19,7 @@
 
     $('form').onsubmit = function (e) {
       e.preventDefault();
-      $('msg').textContent = signup ? 'Account created.' : 'Logged in.';
+      $('msg').textContent = 'Account created.';
     };
   </script>
 </body>
