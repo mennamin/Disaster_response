@@ -93,7 +93,6 @@ require 'includes/header.php';
     <a class="btn secondary" href="users.php">Cancel</a>
   <?php else: ?>
     <button class="btn" type="submit">Add user</button>
-    <a class="btn secondary" href="#">Add profile</a>
   <?php endif; ?>
 </form>
 
