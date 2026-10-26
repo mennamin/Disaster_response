@@ -100,6 +100,7 @@ require 'includes/header.php';
 <table>
   <tr><th>Name</th><th>Email</th><th>Role</th><th>Started</th><th></th></tr>
   <?php foreach ($_SESSION['users'] as $u): ?>
+    <?php if ($u['role'] == 'admin') { continue; } // the admin is not shown in this list ?>
     <?php
       $started = '';
       if (isset($u['started'])) {
