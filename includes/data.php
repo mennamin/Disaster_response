@@ -38,7 +38,7 @@ function seed_data() {
     $_SESSION['users'] = [
         ['id' => 1, 'name' => 'Peter Ben Parker', 'email' => 'peterparker@gmail.com', 'role' => 'reporter', 'started' => '2018-03'],
         ['id' => 2, 'name' => 'Mary Jane', 'email' => 'maryjane@gmail.com', 'role' => 'incident_manager', 'started' => '2019-06'],
-        ['id' => 3, 'name' => 'Fire Station 1', 'email' => 'fire1@city.gov', 'role' => 'department', 'started' => '2020-01'],
+        ['id' => 3, 'name' => 'Department Staff', 'email' => 'staff@gmail.com', 'role' => 'department', 'started' => '2020-01'],
         ['id' => 4, 'name' => 'Admin', 'email' => 'admin@city.gov', 'role' => 'admin', 'started' => '2017-09'],
     ];
     $_SESSION['next_user_id'] = 5;
@@ -300,7 +300,7 @@ function add_incident($type, $location, $severity, $injured, $dead, $description
         'dead' => $dead,
         'description' => substr($description, 0, 1000),
     ];
-    
+    // newest report goes first
     array_unshift($_SESSION['incidents'], $new);
     return '';
 }
