@@ -1,41 +1,43 @@
 :root {
-  --bg: #f5f6f8;
-  --surface: #ffffff;
-  --text: #1d2330;
-  --muted: #6a7385;
-  --line: #e1e4ea;
-  --progress: #b86e00;
-  --progress-bg: #fff1d6;
-  --complete: #1d7a46;
-  --complete-bg: #dff3e7;
-  --inactive: #5b6272;
-  --inactive-bg: #e8eaee;
+  --bg: #cadcec;     
+  --surface: #eaf0f9;  
+  --text: #243342;        
+  --muted: #566a7e;
+  --line: #cfdbe5;
+  --progress: #8a5a14;
+  --progress-bg: #f3e4c8;
+  --complete: #2f6b55;
+  --complete-bg: #d9ebe3;
+  --inactive: #4f6378;
+  --inactive-bg: #dbe4ec;
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #14171d;
-    --surface: #1c2028;
-    --text: #e8eaf0;
-    --muted: #98a0b1;
-    --line: #2c323d;
-    --progress: #f2b34d;
-    --progress-bg: #3a2c10;
-    --complete: #5fcf8e;
-    --complete-bg: #173324;
-    --inactive: #aab1c0;
-    --inactive-bg: #2a2f3a;
+    --bg: #172029;
+    --page-text: #e3eaf1;
+    --page-muted: #9aabbc;
+    --surface: #25394d;
+    --text: #e3eaf1;
+    --muted: #a9bacb;
+    --line: #35495d;
+    --progress: #e0b872;
+    --progress-bg: #3a3020;
+    --complete: #7fcaa9;
+    --complete-bg: #1c3a32;
+    --inactive: #a9b8c7;
+    --inactive-bg: #2b3948;
   }
 }
 body {
   margin: 0;
   background: var(--bg);
-  color: var(--text);
+  color: var(--page-text);
   line-height: 1.5;
 }
 main { max-width: 900px; margin: 0 auto; padding: 40px 20px 64px; }
 h1 { font-size: 1.6rem; margin: 0 0 4px; font-weight: 650; }
-.sub { color: var(--muted); margin: 0 0 28px; }
-ul { list-style: none; margin: 0; padding: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+.sub { color: var(--page-muted); margin: 0 0 28px; }
+ul { list-style: none; margin: 0; padding: 0; background: var(--surface); color: var(--text); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(36, 51, 66, 0.25); }
 li { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 20px; border-bottom: 1px solid var(--line); }
 li:last-child { border-bottom: none; }
 .info { min-width: 0; }
