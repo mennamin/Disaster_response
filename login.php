@@ -7,15 +7,6 @@
 <body>
   <form id="form">
     <h2 id="title">Log in</h2>
-     <select id="dashboard" required>
-     <option value="" disabled selected>Select dashboard</option>
-     <option value="firefighter">Firefighter</option>
-     <option value="reporter">Reporter</option>
-     <option value="hospital">Hospital</option>
-     <option value="police">Police</option>
-     <option value= "incident managment">Incident managment</option>
-     <option value="admin">Admin</option>
-       </select>
     <input type="text" id="name" placeholder="Name" hidden>
     <input type="email" id="email" placeholder="Email" required>
     <input type="password" id="password" placeholder="Password" required>
@@ -41,7 +32,11 @@
 
     $('form').onsubmit = function (e) {
       e.preventDefault();
-      if (signup && $('password').value !== $('confirm').value) {
+      if (signup && /\d/.test($('name').value)) {
+       $('msg').textContent = 'Name cannot contain numbers.';
+        return;
+      }
+      else if (signup && $('password').value !== $('confirm').value) {
         $('msg').textContent = 'Passwords do not match.';
         return;
       }
