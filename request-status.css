@@ -1,0 +1,47 @@
+:root {
+  --bg: #f5f6f8;
+  --surface: #ffffff;
+  --text: #1d2330;
+  --muted: #6a7385;
+  --line: #e1e4ea;
+  --progress: #b86e00;
+  --progress-bg: #fff1d6;
+  --complete: #1d7a46;
+  --complete-bg: #dff3e7;
+  --inactive: #5b6272;
+  --inactive-bg: #e8eaee;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14171d;
+    --surface: #1c2028;
+    --text: #e8eaf0;
+    --muted: #98a0b1;
+    --line: #2c323d;
+    --progress: #f2b34d;
+    --progress-bg: #3a2c10;
+    --complete: #5fcf8e;
+    --complete-bg: #173324;
+    --inactive: #aab1c0;
+    --inactive-bg: #2a2f3a;
+  }
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+main { max-width: 900px; margin: 0 auto; padding: 40px 20px 64px; }
+h1 { font-size: 1.6rem; margin: 0 0 4px; font-weight: 650; }
+.sub { color: var(--muted); margin: 0 0 28px; }
+ul { list-style: none; margin: 0; padding: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+li { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 20px; border-bottom: 1px solid var(--line); }
+li:last-child { border-bottom: none; }
+.info { min-width: 0; }
+.title { font-weight: 600; }
+.meta { color: var(--muted); font-size: .875rem; }
+.status { flex-shrink: 0; font-size: .85rem; font-weight: 600; padding: 4px 12px; border-radius: 999px; }
+.progress { color: var(--progress); background: var(--progress-bg); }
+.complete { color: var(--complete); background: var(--complete-bg); }
+.inactive { color: var(--inactive); background: var(--inactive-bg); }
