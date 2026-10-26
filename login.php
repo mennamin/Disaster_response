@@ -34,9 +34,9 @@
       e.preventDefault();
       if (signup && /\d/.test($('name').value)) {
        $('msg').textContent = 'Name cannot contain numbers.';
-        return;
+      return;
       }
-      else if (signup && $('password').value !== $('confirm').value) {
+      if (signup && $('password').value !== $('confirm').value) {
         $('msg').textContent = 'Passwords do not match.';
         return;
       }
