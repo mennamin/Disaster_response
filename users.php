@@ -86,9 +86,6 @@ require 'includes/header.php';
       </select>
     </div>
     <div><label>Started on</label><input type="month" name="started" value="<?= e($form_started) ?>"></div>
-    <?php if (!$editing): ?>
-      <div><label>Password (not used yet)</label><input type="password" name="password"></div>
-    <?php endif; ?>
   </div>
 
   <?php if ($editing): ?>
