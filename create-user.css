@@ -59,7 +59,6 @@ input {
 input::placeholder { color: #6f8296; }
 input:focus { outline: none; background: #e6eef5; border-color: #34506b; }
 
-/* gender radios */
 .gender-group {
   display: flex;
   align-items: center;
