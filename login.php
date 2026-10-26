@@ -2,15 +2,7 @@
 <html>
 <head>
 <title>Log in</title>
-<style>
-  html { height: 100%; margin: 0; }
-  body { height: 100%; margin: 0; }
-  body { display: flex; align-items: center; justify-content: center;}
-  form { display: flex; flex-direction: column; gap: 8px; width: 260px; }
-  input { padding: 8px; font-size: 16px; }
-  select { padding: 8px; font-size: 16px; }
-  button { padding: 8px; font-size: 16px; }
-</style>
+<link rel="stylesheet" href="login.css">
 </head>
 <body>
   <form id="form">
