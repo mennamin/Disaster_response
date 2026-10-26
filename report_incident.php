@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $error = add_incident($form_type, $form_location, $form_severity, $form_injured, $form_dead, $form_description, $me['id']);
 
     if ($error == '') {
-        set_message('Report sent. The incident management department will review it.', 'ok');
+        set_message('Report sent.', 'ok');
         header('Location: report_incident.php');
         exit;
     }
