@@ -1,0 +1,119 @@
+html { margin: 0; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #cadcec;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+form {
+  width: 100%;
+  max-width: 1200px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 28px;
+  background: #eaf0f9;
+  color: #0c0c0c;
+  padding: 44px 48px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(36, 51, 66, 0.25);
+  text-align: left;
+}
+
+h2, .gender-group, #submit, #msg {
+  grid-column: 1 / -1;
+}
+
+h2 { margin: 0 0 6px; font-size: 2rem; text-align: left; }
+#msg { margin: 0; font-size: 18px; text-align: left; }
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+label { font-size: 18px; text-align: left; }
+
+input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px 22px;
+  font-size: 18px;
+  font-family: inherit;
+  text-align: left;
+  color: #243342;
+  background: #dbe5ee;
+  border: 2px solid transparent;
+  border-radius: 999px;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+input::placeholder { color: #6f8296; }
+input:focus { outline: none; background: #e6eef5; border-color: #34506b; }
+
+/* gender radios */
+.gender-group {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 0 8px;
+  font-size: 18px;
+}
+
+.gender-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.gender-group input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  margin: 0;
+  background: none;
+  border: none;
+  accent-color: #34506b;
+}
+input[type="file"] { font-size: 16px; padding: 10px 16px; }
+
+input[type="file"]::file-selector-button {
+  background: #34506b;
+  color: #f1f5f9;
+  border: none;
+  border-radius: 999px;
+  padding: 8px 16px;
+  margin-right: 12px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input[type="file"]::file-selector-button:hover { background: #2b4359; }
+
+button {
+  padding: 14px;
+  font-size: 18px;
+  font-family: inherit;
+  cursor: pointer;
+  border-radius: 999px;
+  transition: background 0.15s, color 0.15s;
+}
+
+#submit {
+  background: #34506b;
+  color: #f1f5f9;
+  border: none;
+  font-weight: 600;
+  margin-top: 6px;
+}
+
+#submit:hover { background: #2b4359; }
