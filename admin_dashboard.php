@@ -31,7 +31,7 @@ require 'includes/header.php';
   <a class="btn" href="users.php">Manage users &amp; profiles</a>
   <a class="btn secondary" href="report_incident.php">+ Report new incident</a>
   <a class="btn secondary" href="#">Backup requests</a>
-  <a class="btn secondary" href="#">Department resources</a>
+  <a class="btn secondary" href="resources.php">Department resources</a>
 </div>
 
 <?php if ($message): ?>
