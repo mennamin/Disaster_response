@@ -1,3 +1,31 @@
+<?php
+require 'includes/auth.php';
+require_role(['admin']);
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    header('Content-Type: application/json');
+
+    
+    $error = add_user($_POST['name'], $_POST['email'], 'reporter', date('Y-m'), $_POST['password']);
+
+    if ($error == '') {
+        
+        $last = count($_SESSION['users']) - 1;
+        $_SESSION['users'][$last]['phone'] = $_POST['phone'];
+        $_SESSION['users'][$last]['address'] = $_POST['address'];
+        $_SESSION['users'][$last]['shift_time'] = $_POST['shifttime'];
+        $_SESSION['users'][$last]['shift_days'] = $_POST['shiftdays'];
+        $_SESSION['users'][$last]['reporter_id'] = $_POST['reporterid'];
+        $_SESSION['users'][$last]['birthday'] = $_POST['birthday'];
+        $_SESSION['users'][$last]['gender'] = $_POST['gender'];
+        set_message('User added.', 'ok');
+        echo json_encode(['ok' => true]); 
+    } else {
+        echo json_encode(['ok' => false, 'error' => $error]);
+    }
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,7 +62,7 @@
     </div>
     <label for="photo">Reporter id:</label>
     <input type="file" id="photo" accept="image/*" required>
-    <label for="photo">Profile Picture:</label>
+    <label for="pfp">Profile Picture:</label>
     <input type="file" id="pfp" accept="image/*" required>
     <button type="submit" id="submit">Create user</button>
     <p id="msg"></p>
@@ -52,7 +80,31 @@
         $('msg').textContent = 'Passwords do not match.';
         return;
       }
-      $('msg').textContent ='Account created.';
+      var data = new FormData();
+      data.append('name', $('name').value.trim());
+      data.append('email', $('email').value.trim());
+      data.append('password', $('password').value);
+      data.append('phone', $('phone').value);
+      data.append('address', $('address').value);
+      data.append('shifttime', $('shifttime').value);
+      data.append('shiftdays', $('shiftdays').value);
+      data.append('reporterid', $('reporterid').value);
+      data.append('birthday', $('birthday').value);
+      data.append('gender', document.querySelector('input[name="gender"]:checked').value);
+
+      fetch('create-user.php', { method: 'POST', body: data })
+        .then(function (r) { return r.json(); })
+        .then(function (res) {
+          if (res.ok) {
+            $('msg').textContent = 'Account created.';
+            window.location.href = 'users.php';
+          } else {
+            $('msg').textContent = res.error;
+          }
+        })
+        .catch(function () {
+          $('msg').textContent = 'Something went wrong. Try again.';
+        });
     };
   </script>
 </body>
