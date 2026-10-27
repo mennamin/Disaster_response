@@ -5,7 +5,7 @@ require_role(['admin']);
 
 $me = current_user();
 
-// when Delete is pressed on a user
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $error = delete_user($_POST['id'], $me['id']);
 
@@ -52,8 +52,8 @@ require 'includes/header.php';
       <td><span class="badge"><?= role_label($u['role']) ?></span></td>
       <td><?= started_text($started) ?></td>
       <td>
-        <a class="btn small secondary" href="#">Open profile</a>
-        <a class="btn small secondary" href="#">Edit</a>
+        <a class="btn small secondary" href="profile.php">Open profile</a>
+        <a class="btn small secondary" href="editprof.php">Edit</a>
         <form class="inline" method="post" onsubmit="return confirm('Delete this user?');">
           <input type="hidden" name="id" value="<?= $u['id'] ?>">
           <button class="btn small danger" type="submit">Delete</button>
