@@ -39,7 +39,7 @@
           </div>
           <div class="long-box">
             <div class="txt-style down"><B>Reporter ID:</b> 236</div>
-             <div class="txt-style txt5 down"><b>Joined Since: </b>2025/11</div>
+             <div class="txt-style txt5 down"><b>Joined Since: </b>11/29/2025</div>
              <div class="txt-style  down"><b>Status:</b></div>
                <div class="txt-box stat">
                 <div class="dot"></div>

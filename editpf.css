@@ -1,0 +1,277 @@
+#file-pfp
+{
+    display:none;
+}
+#pic:hover
+{
+    cursor:pointer;
+    scale:1.1;
+}
+
+input[type=text] {
+  width: 150px;
+  height: 30px;
+  padding: 6px;
+  font-size: 15px;;
+  margin: 10px 0;
+  background-color: aliceblue;
+  color: rgb(21, 42, 100);
+  border:0px;
+  border-radius: 25px;;
+}
+input[type=email] {
+  width: 200px;
+  height: 20px;
+  padding: 6px;
+  font-size: 15px;;
+  margin: 10px 0;
+  background-color: aliceblue;
+  color: rgb(21, 42, 100);
+    border:0px;
+  border-radius: 25px;;
+}
+input[type=date] {
+  width: 200px;
+  height: 20px;
+  padding: 6px;
+  font-size: 15px;;
+  margin: 10px 0;
+  background-color: aliceblue;
+  color: rgb(21, 42, 100);
+}
+
+button {
+  width: 200px;
+  height: 50px;
+  padding: 6px;
+  font-size: 18px;
+  background-color:  rgb(204, 220, 249);
+  color: rgb(16, 32, 75);
+  border: 0px;
+  border-radius: 25px;
+  margin-top:1px;
+  margin-left:1200px;
+}
+button:hover {
+ 
+  background-color: rgb(16, 32, 75);
+  color:aliceblue;
+  cursor:pointer;
+ 
+ 
+}
+
+#role
+{
+    background-color: aliceblue;
+    border-radius: 25xp;
+    cursor: pointer;
+    font-family: fantasy;
+    font-style: normal;
+}
+
+#role:focus {
+    background-color: rgb(214, 231, 247);
+}
+
+#role option
+{
+    font-family: fantasy;
+}
+
+#namepf
+{
+    margin-left:8px;
+}
+
+#repid:hover
+{
+  cursor:pointer;
+  scale:1.06;
+}
+
+#file-workid
+{
+  display:none;
+}
+
+#id-num
+{
+    width:60px;
+    height:20px;
+}
+
+.row0{
+  display: flex;
+  flex-direction: row;
+}
+.wide-left
+{
+  height:170px;
+}
+
+.txt-style.txt5.down
+{
+  margin-right:3px;
+   margin-left:2px;
+}
+
+.txt-style.stat.down
+{
+  margin-left:1px;
+   margin-top:45px;
+}
+.txt-box.stat{
+  margin-top:35px;
+}
+
+.info-parent2
+{
+  margin-left:50px;
+}
+
+.big-card
+{
+ 
+  margin-top:4px;
+  
+}
+.txt-style.txt5.down
+{
+  height:60px;
+}
+.txt-style.down.g
+{
+  margin-top:16px;
+  display:flex;
+  flex-direction: row;
+}
+.words
+{
+  margin-left:10px;
+}
+
+.txt-style.txt5.down
+{
+  margin-top:7px;
+  margin-left:20px;
+}
+
+.txt-style.down.side
+{
+  margin-top:5px;
+  height:30px;
+}
+#address
+{
+  height:20px;
+}
+
+.wide-col
+{
+  margin-top:10px;
+}
+
+.txt-style.down.s.shift
+{
+  width:600px;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.words.shift
+{
+  width:60px;
+  margin-left:10px;
+}
+
+
+
+
+.dropbtn:hover {
+  background-color:rgb(141, 178, 246);
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+    width:160px;
+  height:50px;
+  border-radius:25px;
+}
+
+.dropbtn {
+  background-color:aliceblue;
+  color: rgb(16, 32, 75);
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  width:160px;
+  height:50px;
+ margin-left: 0px;
+  margin-top: 0px;
+}
+
+
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(133, 171, 241);
+  color: rgb(221, 237, 251);
+    width:160px;
+
+  border-radius: 25px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+.dropdown:hover .dropdown-content {
+  display:block;
+   width:160px;
+
+
+}
+
+.option{
+  color: aliceblue;
+  padding: 12px ;
+  width:160px;
+
+  text-decoration: none;
+  display: block;
+   cursor: pointer;
+}
+
+.option:hover{
+  color: black;
+  background-color: aliceblue;
+   width: 90px;
+    width:160px;
+
+  padding: 12px 19px;
+  text-decoration: none;
+  display: block;
+}
+.words.k
+{
+  width:250px;
+  margin-bottom:20px;
+}
+
+
+.words
+{
+    
+    height:40px;
+    width:50px;
+    font-weight:bolder;
+  font-style: oblique;
+  color:  rgb(21, 42, 100);  
+}
+
+.txt-style.down.s
+{
+  margin-top:30px;
+}

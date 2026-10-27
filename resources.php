@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resources</title>
     <link rel="stylesheet" href="res.css">
+     <script src="res.js" defer></script>
 </head>
 <body>
  
@@ -105,12 +106,12 @@
               <div class="row k">
                 <div class="words k">Allocation Details:</div>
                   <div class="dropdown">
-                 <button class="dropbtn">24h</button>
+                 <button class="dropbtn" id="time">24h</button>
                    <div class="dropdown-content">
-                       <div class="option" >24h</div>
-                       <div class="option" >7 days</div>
-                       <div class="option"  >1 month</div>
-                       <div class="option" >All time</div>
+                       <div class="option" id="a" >24h</div>
+                       <div class="option" id="b" >7 days</div>
+                       <div class="option" id="c" >1 month</div>
+                       <div class="option" id="d" >All time</div>
                    </div>
                 </div>
          </div>
