@@ -33,7 +33,7 @@ require 'includes/header.php';
 
 <div class="actions">
   <a class="btn" href="request-status.php">Backup requests</a>
-  <a class="btn secondary" href="#">Department resources</a>
+  <a class="btn secondary" href="resources.php">Department resources</a>
 </div>
 
 <h2>Reports &amp; priority</h2>
