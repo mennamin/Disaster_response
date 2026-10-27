@@ -20,7 +20,7 @@
               <div id="txt-role">Reporter</div>
          </div>
             <div class="small-txt">
-            <div class="small-info" id="email">peterparker@gmail.com</div>
+            <div class="small-info" id="email">peterparkersys@gmail.com</div>
            
    </div>
           </div>
@@ -70,6 +70,7 @@
              <div class="txt-style down s"><B>Shift: </b>Night</div>
               <div class="txt-style down s"><B>Days: </b>Sunday-Thursday</div>
              <div class="txt-style down s"><b>Number Of Reports Filed: </b>3930</div>
+             
     
 
        </div>

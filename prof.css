@@ -1,22 +1,25 @@
 html,body
 {
   font-family:serif;
-  background-color:  rgb(230, 238, 253);
+  background-color:  rgb(248, 250, 255);
 }
-
 
 .big-card
 {
   display: flex;
   flex-direction: column;
-  overflow: hidden;
   flex-wrap:wrap;
   height: 650px;
   margin:3%;
   background-color: rgb(204, 220, 249);
   border-radius: 25px;
 }
-
+.cards
+{
+  display:flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+}
 .pic-n-name
 {
   width:450px;
@@ -53,8 +56,6 @@ html,body
 { margin-top: 5px;
    margin-left: 10px;
     font-size:14px;
-
-
 }
 
 .small-info
@@ -244,3 +245,4 @@ margin: 25px;
     border-radius: 25px;
     margin:24px;
 }
+
