@@ -64,7 +64,7 @@ if (count($words) > 1) {
           <div class="menu-name"><?= e($account['name']) ?></div>
           <div class="menu-email"><?= e($account['email']) ?></div>
           <div class="menu-role"><?= e($role_name) ?></div>
-          <a class="btn small secondary" href="#">View profile</a>
+          <a class="btn small secondary" href="profile.php">View profile</a>
         </div>
       </div>
     </div>
