@@ -1,8 +1,15 @@
 document.getElementById("pic").addEventListener("click",function()
 {
     document.getElementById("file-pfp").click()
-});
 
+});
+document.getElementById("file-pfp").addEventListener("change", function() {
+    let file = this.files[0];
+
+    if (file) {
+        document.getElementById("pic").src = URL.createObjectURL(file);
+    }
+});
 
  document.getElementById("namepf").value="Peter Ben Parker";
 
@@ -15,6 +22,14 @@ document.getElementById("repid").addEventListener("click",function()
 }
 
 );
+
+document.getElementById("file-workid").addEventListener("change", function() {
+    let file = this.files[0];
+
+    if (file) {
+        document.getElementById("repid").src = URL.createObjectURL(file);
+    }
+});
 
 document.getElementById("address").value ="Nasr City";
 
@@ -85,3 +100,4 @@ document.getElementById("b").addEventListener("click",function()
     
     document.getElementById("time").textContent=document.getElementById("b").textContent;
 });
+
