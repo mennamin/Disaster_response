@@ -16,10 +16,29 @@
   <script>
     var signup = false;
     var $ = function (id) { return document.getElementById(id); };
-
+    var testUsers = [
+      { email: 'admin@gmail.com',      password: 'admin123',      page: 'admin_dashboard.php' },
+      { email: 'department@gmail.com', password: 'department123', page: 'department_dashboard.php' },
+      { email: 'manager@gmail.com',    password: 'manager123',    page: 'manager_dashboard.php' },
+      { email: 'reporter@gmail.com',   password: 'reporter123',   page: 'reporter_dashboard.php' }
+    ];
+ 
     $('form').onsubmit = function (e) {
       e.preventDefault();
-      $('msg').textContent = 'Account created.';
+ 
+      var email = $('email').value.trim().toLowerCase();
+      var password = $('password').value;
+ 
+      var user = testUsers.find(function (u) {
+        return u.email === email && u.password === password;
+      });
+ 
+      if (user) {
+        $('msg').textContent = 'Login successful. Redirecting...';
+        window.location.href = user.page;
+      } else {
+        $('msg').textContent = 'Invalid email or password.';
+      }
     };
   </script>
 </body>
