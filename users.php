@@ -5,7 +5,7 @@ require_role(['admin']);
 
 $me = current_user();
 
-
+// when Delete is pressed on a user
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $error = delete_user($_POST['id'], $me['id']);
 
@@ -32,7 +32,7 @@ require 'includes/header.php';
 <?php endif; ?>
 
 <div class="actions">
-  <a class="btn" href="#">Add user</a>
+  <a class="btn" href="create-user.php">Add user</a>
 </div>
 
 <h2 style="margin-top:36px">All users</h2>
