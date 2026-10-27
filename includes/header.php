@@ -17,6 +17,33 @@ if (count($words) > 1) {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title><?= e($pageTitle) ?></title>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+.dash-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 10px;
+  margin-bottom: 18px;
+  padding: 8px;
+  background: var(--inner-bg);
+  border-radius: 999px;
+}
+.dash-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 8px 22px;
+  border-radius: 999px;
+  color: var(--text);
+  text-decoration: none;
+  line-height: 1.15;
+}
+.dash-link small { color: var(--muted); font-style: italic; }
+.dash-link:hover { background: #d3e0fa; }
+.dash-link.current { background: var(--accent); color: #fff; }
+.dash-link.current small { color: #dfe6ff; }
+.dash-link.reset { margin-left: auto; color: var(--muted); font-style: italic; }
+  </style>
 </head>
 <body>
 <div class="container">
@@ -38,21 +65,20 @@ if (count($words) > 1) {
           <div class="menu-email"><?= e($account['email']) ?></div>
           <div class="menu-role"><?= e($role_name) ?></div>
           <a class="btn small secondary" href="#">View profile</a>
-          <?php if (!DEMO_MODE): ?>
-            <a class="btn small" href="logout.php">Log out</a>
-          <?php endif; ?>
         </div>
       </div>
     </div>
   </div>
 
   <?php if (DEMO_MODE): ?>
-    <div class="flash ok demo-bar">
-      Demo mode (no login yet). Pretend to be:
+    <div class="dash-bar">
       <?php foreach ($_SESSION['users'] as $u): ?>
-        <a href="?as=<?= $u['id'] ?>" <?php if ($u['id'] == $account['id']) { echo 'class="current"'; } ?>><?= e($u['name']) ?> (<?= e(role_label($u['role'])) ?>)</a> |
+        <a class="dash-link<?php if ($u['id'] == $account['id']) { echo ' current'; } ?>" href="<?= dashboard_for($u['role']) ?>?as=<?= $u['id'] ?>">
+          <?= e(role_label($u['role'])) ?> dashboard
+          <small><?= e($u['name']) ?></small>
+        </a>
       <?php endforeach; ?>
-      <a href="?reset=1">reset demo data</a>
+      <a class="dash-link reset" href="?reset=1">Reset data</a>
     </div>
   <?php endif; ?>
 
