@@ -34,7 +34,7 @@ function get_initials($name) {
 }
 
 function seed_data() {
-    
+   
     $_SESSION['users'] = [
         ['id' => 1, 'name' => 'Peter Ben Parker', 'email' => 'peterparker@gmail.com', 'role' => 'reporter', 'started' => '2018-03'],
         ['id' => 2, 'name' => 'Mary Jane', 'email' => 'maryjane@gmail.com', 'role' => 'incident_manager', 'started' => '2019-06'],
@@ -300,7 +300,7 @@ function add_incident($type, $location, $severity, $injured, $dead, $description
         'dead' => $dead,
         'description' => substr($description, 0, 1000),
     ];
-    // newest report goes first
+    
     array_unshift($_SESSION['incidents'], $new);
     return '';
 }
