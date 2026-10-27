@@ -16,7 +16,7 @@ require 'includes/header.php';
 
 <div class="actions">
   <a class="btn" href="#">Request backup</a>
-  <a class="btn secondary" href="#">Report details</a>
+  <a class="btn secondary" href="reports.html">Report details</a>
 </div>
 
 <h2>Our active incidents</h2>
