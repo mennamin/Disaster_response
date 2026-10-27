@@ -15,7 +15,7 @@ require 'includes/header.php';
 </div>
 
 <div class="actions">
-  <a class="btn" href="#">Request backup</a>
+  <a class="btn" href="backup-requests.php">Request backup</a>
   <a class="btn secondary" href="reports.html">Report details</a>
 </div>
 
@@ -30,7 +30,7 @@ require 'includes/header.php';
       <td><span class="badge <?= $r['severity'] ?>"><?= $r['severity'] ?></span></td>
       <td><?= e($r['note']) ?></td>
       <td><?= $r['time'] ?></td>
-      <td><a class="btn small" href="#">Best route</a></td>
+      <td><a class="btn small" href="best-route.php">Best route</a></td>
     </tr>
   <?php endforeach; ?>
   <?php if (count($mine) == 0): ?>
