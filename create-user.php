@@ -16,6 +16,12 @@
     <input type="text" id="shifttime" placeholder="Shift time" required>
     <input type="text" id="shiftdays" placeholder="Shift days" required>
     <input type="text" id="reporterid" placeholder="Reporter id" required>
+    <select name="role" id="role">
+      <option value="reporter">reporter</option>
+      <option value="incidentmanagment">incident managment</option>
+      <option value="department">department</option>
+      <option value="admin">admin</option>
+    </select>
     <input type="date" id="birthday" placeholder="Date of birth" required>
     <div class="gender-group">
     <span>Gender:</span>
